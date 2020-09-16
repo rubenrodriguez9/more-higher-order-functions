@@ -59,11 +59,13 @@ const book2 = {
 let comparison = (book1, book2) => {
 let values1 = Object.values(book1);
 let values2 = Object.values(book2);
+let key1 = Object.keys(book1);
+let key2 = Object.keys(book2)
 if(values1.length !== values2.length){
 return console.log(false)
 }
 for(let i = 0; i < values1.length;i++){
-if(values1[i] !== values2[i]){
+if(values1[i] !== values2[i] || key1[i] !== key2[i]){
 return console.log(false)
 }
 
